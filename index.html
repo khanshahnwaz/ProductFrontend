@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./MobileHeader/RestNav.css"/>
+    <title>HTML CSS Frontend</title>
+</head>
+
+<body>
+
+    <!-- navigation section  -->
+    <header>
+        <div class="header_container">
+            <div>
+                <button style="background-color: black; padding: 10px 15px; color: white; font: bold; width: max-content; border-radius: 10px;">Contact Us</button>
+            </div>
+            <nav>
+                <ul class="header_nav">
+
+                    <li>Wedding Cards</li>
+                    <li>Birthday Cards</li>
+                    <li>Feeling Cards</li>
+                    <li>Anniversary Cards</li>
+
+                </ul>
+            </nav>
+            <div>
+                <ul class="header_nav second_list">
+                    <li>Login &#124;</li>
+                    <li>SignUp</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+         <!-- Mobile version header -->
+        
+    <div class='resNav'>
+        <div style="display: flex ;">
+        <button id="slowmo">
+            <!-- {/* Slow motion <span>mode</span> */} -->
+        </button>
+
+        <div class="device">
+            <div class="container">
+                <button id="burger" class="open-main-nav ">
+                    <span class="burger"></span>
+                    <span class="burger-text">Menu</span>
+                </button>
+                <nav class='main-nav' id="main-nav">
+                    <ul class="" onclick="closeNav()">
+                        <li>Log In</li>
+                        <li>Sign Up</li>
+                        <li>Wedding Cards</li>
+                        <li>Birthday Cards</li>
+                        <li>Feeling Cards</li>
+                        <li>Anniversary Cards</li>
+                        
+                    </ul>
+                </nav>
+                <!-- {/* <p class="notice">Design Copyright <strong>Stéphanie Walter</strong><br/><a href="https://stephaniewalter.design/" target="_blank">StephanieWalter.Design</a></p> */} -->
+            </div>
+        </div>
+        <div>
+            <button style="background-color: black; padding: 10px 15px; color: white; font: bold; width: max-content; border-radius: 10px;">Contact Us</button>
+        </div>
+    </div>
+
+      
+    </div>
+
+    </header>
+    <!-- navigation section  -->
+
+    <main>
+        <div class="background_container">
+            <div id="background">
+                <h1 style="padding-top:30px;">Digital Card Details</h1>
+
+                <div class="floated_div">
+                    <div class="imageDiv">
+                        <!-- design samples by displaying images  -->
+                        <div>
+                            <div id="imageWrapper">
+                                <img class='img' id="image1" src="./ASSETS/Page1.jpg" alt="image1"
+                                    style="z-index: 10;" />
+                                <img class='img' id="image2" src="./ASSETS/Page2.jpg" alt="image1" />
+                                <img class='img' id="image3" src="./ASSETS/Page3.jpg" alt="image1"  />
+
+                            </div>
+                        </div>
+                        <!-- design samples by displaying images  -->
+
+
+                        <!-- Card price and details  -->
+                        <div id="cardHolder">
+
+                            <div id="cardDetail">
+                                <div style="display: grid; gap:20;">
+                                    <h1
+                                        style="font-size: 50px; font-style: italic; font-weight: 300; text-align: center; margin:10px 0;">
+                                        Card Title</h1>
+                                    <div style=" display:flex; justify-content: space-between">
+                                        <div style="font-size: 30px; ">
+                                            <p></p><b>$499</b> <del>$2000</del></p>
+                                        </div>
+                                        <div
+                                            style="color:rgb(14, 176, 14); font-size: 20px; font-weight:30px; font-size: 30px;">
+                                            <span
+                                                style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">75%
+                                                off</span>
+                                        </div>
+                                    </div>
+
+
+                                    <p style="text-align: left; font-size: smaller; font-weight: lighter;">
+                                        Donec eu ornare mi. Sed finibus
+                                        condimentum mauris, ut dictum eros
+                                        maximus vitae. Nullam
+                                        condimentum tortor ac elit feugiat
+                                        iaculis. Aenean mauris nisl, blandit</p>
+                                </div>
+                                <button id="try">Try this card</button>
+                            </div>
+
+
+                        </div>
+                        <!-- Card price and details  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- features section  -->
+        <div id="featureContainer">
+
+            <p style="text-align:center; font-size:50px; font-style:italic;color: black;">Features</p>
+
+            <div class="features">
+                <div class="featureDetail">
+                    <img class="featureImage" src="./ASSETS/Background.jpg" alt="cards" />
+                    <p>Create your card<br />in just 5 minutes.</p>
+                </div>
+                <div class="featureDetail">
+                    <img class="featureImage" src="./ASSETS/Background.jpg" alt="cards" />
+                    <p>Customize the Text <br />
+                        with "Edit this Page" Option</p>
+                </div>
+                <div class="featureDetail">
+                    <img class="featureImage" src="./ASSETS/Background.jpg" alt="cards" />
+                    <p>Editing is available<br />
+                        after purchase also</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- features section  -->
+
+    </main>
+<script src="./MobileHeader/ResNav.js"></script>
+</body>
+
+</html>
