@@ -29,5 +29,6 @@ document.getElementById('submit').addEventListener('click',(e)=>{
   }
 
   if(flag)
-    window.location.href='index.php'
+  window.location.href='http://productfrontend.infinityfreeapp.com/index.php?i=1'
+    // window.location.href='index.php'
 })
