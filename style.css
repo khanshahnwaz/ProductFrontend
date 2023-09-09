@@ -12,8 +12,8 @@ main{
     justify-content: space-around;
     font-size: large;
     font-style: italic;
-    margin-top:20px;
-    line-height:70px;
+    margin:20px ;
+    
 }
 .header_nav {
     display: flex;
@@ -32,11 +32,11 @@ main{
     height: fit-content;
     margin-top:0;
 }
-.background_container{
+#background_container{
     
     position: relative;
-    
-    margin: auto;
+    margin: 0 auto;
+    margin-bottom: 0;
     margin-bottom: 10%;
     width: 90vw;
     height: 100%;
@@ -49,7 +49,7 @@ main{
 }
 #background{
     background-image: url('./ASSETS/Background.jpg');
-    height: 50%;
+    height: 30%;
     border-radius: 70px;
 }
 .floated_div{
@@ -184,7 +184,7 @@ main{
     #image2{
         z-index:5 ;
         /* position: relative; */
-        top:2%;
+        /* top:10%; */
         right: 2%;
         /* height: 150px; */
         
@@ -193,7 +193,7 @@ main{
     #image3{
         /* position: relative; */
         right: 10%;
-        
+        /* top:5% */
         /* height: 130px; */
         
         

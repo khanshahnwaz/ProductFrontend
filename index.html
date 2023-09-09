@@ -4,7 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./MobileHeader/RestNav.css"/>
+    <link rel="stylesheet" href="./MobileHeader/RestNav.css" />
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>HTML CSS Frontend</title>
 </head>
 
@@ -14,7 +17,9 @@
     <header>
         <div class="header_container">
             <div>
-                <button style="background-color: black; padding: 10px 15px; color: white; font: bold; width: max-content; border-radius: 10px;">Contact Us</button>
+                <button
+                    style="background-color: black;  height: max-content; color: white; font: bold; width: max-content; border-radius: 10px; padding: 10px 15px;"
+                    onclick="handleForm()" class="hover:opacity-60">Contact Us</button>
             </div>
             <nav>
                 <ul class="header_nav">
@@ -36,49 +41,133 @@
 
 
 
-         <!-- Mobile version header -->
-        
-    <div class='resNav'>
-        <div style="display: flex ;">
-        <button id="slowmo">
-            <!-- {/* Slow motion <span>mode</span> */} -->
-        </button>
+        <!-- Mobile version header -->
 
-        <div class="device">
-            <div class="container">
-                <button id="burger" class="open-main-nav ">
-                    <span class="burger"></span>
-                    <span class="burger-text">Menu</span>
+        <div class='resNav'>
+            <div style="display: flex ;">
+                <button id="slowmo">
+                    <!-- {/* Slow motion <span>mode</span> */} -->
                 </button>
-                <nav class='main-nav' id="main-nav">
-                    <ul class="" onclick="closeNav()">
-                        <li>Log In</li>
-                        <li>Sign Up</li>
-                        <li>Wedding Cards</li>
-                        <li>Birthday Cards</li>
-                        <li>Feeling Cards</li>
-                        <li>Anniversary Cards</li>
-                        
-                    </ul>
-                </nav>
-                <!-- {/* <p class="notice">Design Copyright <strong>Stéphanie Walter</strong><br/><a href="https://stephaniewalter.design/" target="_blank">StephanieWalter.Design</a></p> */} -->
-            </div>
-        </div>
-        <div>
-            <button style="background-color: black; padding: 10px 15px; color: white; font: bold; width: max-content; border-radius: 10px;">Contact Us</button>
-        </div>
-    </div>
 
-      
-    </div>
+                <div class="device">
+                    <div class="container">
+                        <button id="burger" class="open-main-nav ">
+                            <span class="burger"></span>
+                            <span class="burger-text">Menu</span>
+                        </button>
+                        <nav class='main-nav' id="main-nav">
+                            <ul class="" onclick="closeNav()">
+                                <li>Log In</li>
+                                <li>Sign Up</li>
+                                <li>Wedding Cards</li>
+                                <li>Birthday Cards</li>
+                                <li>Feeling Cards</li>
+                                <li>Anniversary Cards</li>
+
+                            </ul>
+                        </nav>
+                        <!-- {/* <p class="notice">Design Copyright <strong>Stéphanie Walter</strong><br/><a href="https://stephaniewalter.design/" target="_blank">StephanieWalter.Design</a></p> */} -->
+                    </div>
+                </div>
+                <div>
+                    <button
+                        style="background-color: black; padding: 10px 15px; color: white; font: bold; width: max-content; border-radius: 10px;"
+                        onclick="handleForm()">Contact Us</button>
+                </div>
+            </div>
+
+
+        </div>
 
     </header>
     <!-- navigation section  -->
 
-    <main>
-        <div class="background_container">
+    <div>
+
+        <!-- Contact us form section  -->
+        <div id="formContainer" style="display: none;">
+            <div class="fixed  z-30 w-screen h-screen inset-0 bg-gray-700 bg-opacity-60"></div>
+
+            <div id='container'
+                class="flex fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-40  bg-white rounded-lg shadow-2xl p-10 py-5 md:w-[50%] w-[92%] ">
+                <img src='./ASSETS/close.png' alt='remove'
+                    class='float-right fixed -traslate-x-1/2 -translate-y-1/2 -right-2 -top-2 hover:opacity-10 cursor-pointer h-8'
+                    onClick="handleForm()" />
+
+
+                <!-- {/* left division */} -->
+                <div
+                    class="h-max bg-[url(./ASSETS/Background.jpg)]  border-white rounded-lg shadow-lg w-[350px] hidden lg:block ">
+                    <p class="text-left text-base font-bold text-white pl-10 mt-4">Card Community</p>
+                    <p class="text-4xl tracking-wider text-left mt-10 p-10 text-white font-bold">Share your <br />
+                        doubts or ideas with us</p>
+                    <p class="text-sm mt-2 text-left px-10 text-gray-200">Discover world best community of freelancers
+                        and business owners.</p>
+                    <div
+                        class=" mt-44  py-5 px-5 pb-4 mx-10 bg-orange-950 text-base font-bold  text-left text-gray-200 h-32 rounded-lg shadow-lg">
+                        Simply unbelievable! I am absolutely satisfied with my business. This is absolutely wonderful.
+                    </div>
+                </div>
+                <!-- {/* right division */} -->
+                <div class="bg-white h-full w-[100%] lg:w-[50%] ">
+                    <div class='mt-5 p-5 lg:p-10 mb-0'>
+                        <p class='text-left text-4xl font-bold tracking-wide text-orange-900'>Contact Us</p>
+                        <p class='mt-2 text-sm tracking-wide text-left font-semibold'>Feel free to reach to us.
+                        </p>
+
+                    </div>
+                    <div class='-mt-8 lg:p-10 p-5 '>
+                        <!-- {/* Form section  */} -->
+
+                        <form id="form">
+                            <div class="grid gap-5">
+                                <div>
+                                    <label htmlFor='name'
+                                        class='float-left text-orange-900 font-bold'>Name</label><br />
+
+                                    <input type='text'
+                                        class='border-2 border-orange-900 rounded-lg float-left mt-1 py-2 w-full'
+                                        name='name' required></input>
+                                    <p class="text-red-500 text-sm " id="name"></p>
+                                </div>
+
+                                <div>
+                                    <label htmlFor='email'
+                                        class='float-left text-orange-900 font-bold'>Email</label><br />
+
+                                    <input type='text'
+                                        class='border-2 border-orange-900 rounded-lg float-left mt-1 py-2 w-full'
+                                        name='email' required></input>
+                                        <p class="text-red-500 text-sm " id="email"></p>
+                                </div>
+
+                                <div>
+                                    <label htmlFor='message'
+                                        class='float-left text-orange-900 font-bold'>Message</label><br />
+
+                                    <textarea
+                                        class='border-2 border-orange-900 rounded-lg float-left mt-1 py-2 w-full'
+                                        name='message' required></textarea>
+                                        <p  class="text-red-500 text-sm " id="message"></p>
+                                </div>
+                               
+                            </div>
+
+
+
+
+                            <button id="submit" type='submit'
+                                class=' font-bold float-left cursor-pointer bg-orange-900 text-white py-2 px-5 my-2 rounded '>Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact us form section ends  -->
+        <div id="background_container">
             <div id="background">
-                <h1 style="padding-top:30px;">Digital Card Details</h1>
+                <p style="padding:30px 0;" class="text-4xl font-bold">Digital Card Details</p>
 
                 <div class="floated_div">
                     <div class="imageDiv">
@@ -88,7 +177,7 @@
                                 <img class='img' id="image1" src="./ASSETS/Page1.jpg" alt="image1"
                                     style="z-index: 10;" />
                                 <img class='img' id="image2" src="./ASSETS/Page2.jpg" alt="image1" />
-                                <img class='img' id="image3" src="./ASSETS/Page3.jpg" alt="image1"  />
+                                <img class='img' id="image3" src="./ASSETS/Page3.jpg" alt="image1" />
 
                             </div>
                         </div>
@@ -101,7 +190,7 @@
                             <div id="cardDetail">
                                 <div style="display: grid; gap:20;">
                                     <h1
-                                        style="font-size: 50px; font-style: italic; font-weight: 300; text-align: center; margin:10px 0;">
+                                        class="text-center font-semibold text-5xl tracking-wide">
                                         Card Title</h1>
                                     <div style=" display:flex; justify-content: space-between">
                                         <div style="font-size: 30px; ">
@@ -123,7 +212,7 @@
                                         condimentum tortor ac elit feugiat
                                         iaculis. Aenean mauris nisl, blandit</p>
                                 </div>
-                                <button id="try">Try this card</button>
+                                <button id="try" class="font-semibold text-lg">Try this card</button>
                             </div>
 
 
@@ -158,8 +247,10 @@
         </div>
         <!-- features section  -->
 
-    </main>
-<script src="./MobileHeader/ResNav.js"></script>
+        </main>
+        <script src="./MobileHeader/ResNav.js"></script>
+        <script src="./index.js"></script>
+
 </body>
 
 </html>
